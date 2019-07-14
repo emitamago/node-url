@@ -23,7 +23,7 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-eb41ae8905bdd2b439d03b1628aaa345c177848bb8e6c36ea8c5a56cf03ef757.ico" />
   <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="RRLEvfPxEUcvVgrQzkkDYJYm4nBaB25G+Q5nrGuFSCISxi4qp6RqL1vuV2AtuUKaeKs+IqyQyeKRvbGPT485UA==" />
+<meta name="csrf-token" content="Rb24HTRIKkDiPUqRWFJ/EUyuru13KeaE4S426jshYVSnj7evAo3lizBqHmZBMTTVoGK+GVeBbd2qmle4qiFAcw==" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -455,7 +455,7 @@ window.ChatraSetup = {
         <div class="col-md-3 col-sm-4 text-center">
             <a style="padding:0;" class="footer-logo" href="/">
               <img class="logo" width="120" height="58" alt="rithm school company logo" title="Rithm School Logo" src="/assets/logos/rithm_logo-52c2ff4eb53876f905ff2d8b1d46b5ec737caa4d9f9acf4790dcd856f3ccc638.svg" />
-</a>            <span><a class="text-muted faq-url" href="/cdn-cgi/l/email-protection#533a3d353c13213a273b3e20303b3c3c3f7d303c3e">info@rithmschool.com</a></span>
+</a>            <span><a class="text-muted faq-url" href="/cdn-cgi/l/email-protection#5e373038311e2c372a36332d3d36313132703d3133">info@rithmschool.com</a></span>
         </div>
         <div class="col-md-6 col-sm-8">
           <div class="text-center email_signup_heading">
@@ -494,7 +494,7 @@ window.ChatraSetup = {
 <div class="thank_you"></div>
 <div class="container">
   <form id="unlock-form" class="card mfp-hide white-popup-block" >
-<input type="hidden" name="authenticity_token" id="authenticity_token" value="j+VQea/RLeskCbw0LQXVp1KjmXmgVN3m6C6RnAehGL7YMbru+4RWg1Cx4YTO9ZRdvC5FK1bDekKAnUe/I6tpzA==" />  <div id="modal-email-known" style="display:none;">
+<input type="hidden" name="authenticity_token" id="authenticity_token" value="WCiblXc9IqIvtOEpQ0/9gWFT39rIWf9uOrswS7XHUk66GpQnQfjtaf3jtd5aLLZFjZ/PLujxdDdxD1EZJMdzaQ==" />  <div id="modal-email-known" style="display:none;">
     <h1 class="text-center">Signed up already? Please enter your email to confirm.</h1>
     <div class="email-errors text-center"></div>
     <hr class="modal--bar">

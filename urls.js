@@ -1,49 +1,54 @@
+/** 
+ * This is terminal script program. it will take text file containing URLs
+ *  as comman line argument .
+ * it will read the file and create new files with HTML of the URLs into
+ * directory call new_file. "http://" or "https://" is required to correctly be written
+ * into new files.
+ */
 
+// dependencies 
 const process = require('process');
 const fs = require("fs");
 const axios = require('axios');
 
-
+// textl file that will be read
 let fileName = process.argv[2]
 
 
 
-// write and  create new files
-function handleOutput(text, out) {
-      fs.writeFile(`new_files/${out}`, text, 'utf8', function(err) {
+// write downloaded HTML to write and create  new files. Name of file is
+// host name of URL
+function writeAndCreateNewFile(html, newFileName) {
+      fs.writeFile(`new_files/${newFileName}`, html, 'utf8', function(err) {
         if (err) {
-          console.error(`Couldn't write ${out}: ${err}`);
-        //   process.exit(1);
+          console.error(`Couldn't write ${newFileName}: ${err}`);
         }else{
-            console.log(`Wrote to ${out}`)
+            console.log(`Wrote to ${newFileName}`)
         }
       });
   }
 
-//  get text from URL and write them on the new file
+//  Make call to URL and download from them
 
   async function webCat(urls, names) {
-    let promise = []
-    for(let url of urls) {
-        try{
-        let resp = axios.get(url)
-        promise.push(resp)
-        }catch(err){
-        console.error(`Could not download from ${url}`);
+    try{
+          let results = await Promise.all(urls.map( url => {return axios.get(url)}))
+          let i = 0 
+          for(let a of results){
+            writeAndCreateNewFile(a.data, names[i])
+              i++
+          }
+      }catch(err){
+       console.error(`Could not download from ${url}`);
     }
-}
+   }
 
-let i = 0 
-    for(let a of promise){
-        let b = await a
-        handleOutput(b.data, names[i])
-        i++
-    }
+
     
-    }
+    
   
   
-  /** read file at path and print it out. */
+  /** read file at path and print it. */
   
   function readFileAndCreateFiles(path) {
     fs.readFile(path, 'utf8', function(err, data) {
